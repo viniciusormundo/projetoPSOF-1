@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Empresas Parceiras</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,22 +22,75 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main class="paginaEmpresas">
+        <!-- Cabeçalho da Página -->
+        <section class="cabecalhoEmpresas">
+            <h2 id="tituloPaginaEmpresas">EMPRESAS PARCEIRAS</h2>
+            <p id="subtituloPaginaEmpresas">Conheça as principais empresas e indústrias integradas à nossa rede de transporte e mobilidade do trabalhador.</p>
+        </section>
+
+        <!-- Cards das Empresas -->
+        <section class="gridEmpresas">
+            <!-- Empresa 1: Zaccaria -->
+            <article class="cardEmpresa">
+                <div class="logoEmpresa">
+                    <img src="./imagens/logo_zaccaria.png" alt="Zaccaria">
+                </div>
+                <p class="descricaoEmpresa">Fabricante de máquinas e equipamentos industriais</p>
+                <span class="localizacaoEmpresa">Limeira – SP</span>
+                <a href="#" class="btnSaibaMaisEmpresa">Saiba mais</a>
+            </article>
+
+            <!-- Empresa 2: Unipac -->
+            <article class="cardEmpresa">
+                <div class="logoEmpresa">
+                    <img src="./imagens/logo_unipac.png" alt="Unipac">
+                </div>
+                <p class="descricaoEmpresa">Empresa de componentes e produtos industriais</p>
+                <span class="localizacaoEmpresa">Limeira – SP</span>
+                <a href="#" class="btnSaibaMaisEmpresa">Saiba mais</a>
+            </article>
+
+            <!-- Empresa 3: Forvia -->
+            <article class="cardEmpresa">
+                <div class="logoEmpresa">
+                    <img src="./imagens/logo_forvia.png" alt="Forvia">
+                </div>
+                <p class="descricaoEmpresa">Fabricante de peças e componentes para veículos automotores</p>
+                <span class="localizacaoEmpresa">Limeira – SP</span>
+                <a href="#" class="btnSaibaMaisEmpresa">Saiba mais</a>
+            </article>
+        </section>
+
+        <!-- Bloco Informativo Inferior -->
+        <section id="blocoDetalheEmpresa">
+            <div class="logoDetalhe">
+                <img src="./imagens/logo_forvia.png" alt="Forvia Logo">
+            </div>
+            <hr class="divisorBlocoEmpresa">
+            <div class="conteudoDetalheEmpresa">
+                <h3>Transporte para funcionários</h3>
+                <p>A empresa disponibiliza transporte exclusivo para os colaboradores. Com linhas que atendem diferentes regiões de Limeira.</p>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>

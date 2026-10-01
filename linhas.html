@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Linhas e Rotas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,22 +22,90 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main class="paginaLinhas">
+        <!-- Cabeçalho da Página -->
+        <section class="cabecalhoLinhas">
+            <h2 id="tituloPaginaLinhas">LINHAS E ROTAS</h2>
+            <p id="subtituloPaginaLinhas">Consulte as linhas disponíveis e encontre informações sobre trajetos e horários.</p>
+        </section>
+
+        <!-- Bloco de Busca de Linha -->
+        <article id="areaConsultaLinha">
+            <h3 id="tituloConsultarLinha">Consultar linha</h3>
+            <div id="areaCampoEBotaoLinha">
+                <input type="text" placeholder="Ex: Linha 01">
+                <button type="button" id="btnBuscarLinha">Buscar</button>
+            </div>
+        </article>
+
+        <!-- Container de Detalhes da Rota -->
+        <section id="areaDetalhesRota">
+            <div id="cabecalhoDetalhesRota">
+                <span class="subtituloDetalhes">Detalhes da Rota</span>
+                <h2>Linha 01 — Distrito Industrial</h2>
+            </div>
+
+            <div id="gridConteudoLinha">
+                <!-- Card com Trajeto e Pontos de Embarque -->
+                <article class="cardTrajeto">
+                    <div class="seccaoTrajeto">
+                        <h3>Trajeto</h3>
+                        <p class="passosTrajeto">
+                            Terminal Urbano Central &rarr; <br>
+                            Avenida Campinas &rarr; <br>
+                            Via Prefeito Jurandir Paixão &rarr; <br>
+                            Distrito Industrial
+                        </p>
+                    </div>
+
+                    <div class="seccaoPontosEmbarque">
+                        <h3>Pontos de embarque</h3>
+                        <ul>
+                            <li>Terminal Urbano Central</li>
+                            <li>Avenida Campinas</li>
+                            <li>Via Prefeito Jurandir Paixão</li>
+                            <li>Distrito Industrial</li>
+                        </ul>
+                    </div>
+
+                    <a href="horarios.html" class="btnConsultarHorariosRota">Consultar Horários</a>
+                </article>
+
+                <!-- Card com o Mapa e Pontos Importantes -->
+                <article class="cardMapa">
+                    <div class="imagemMapa">
+                        <img src="./imagens/mapa_rota.png" alt="Mapa da Rota">
+                    </div>
+                    <div class="pontosNoMapa">
+                        <h3>Pontos importantes no mapa</h3>
+                        <ol>
+                            <li>Terminal Urbano Central</li>
+                            <li>Avenida Campinas</li>
+                            <li>Via Prefeito Jurandir Paixão</li>
+                            <li>Distrito Industrial</li>
+                        </ol>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>

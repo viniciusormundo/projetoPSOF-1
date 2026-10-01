@@ -1,176 +1,1055 @@
+/* ==========================================================================
+   1. RESET E ESTILOS GERAIS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-main {
-    padding: 40px;
-    margin: 0;
+
+body {
+    background-color: #0c3d66;
 }
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER) E NAVEGAÇÃO (NAV)
+   ========================================================================== */
 header {
-    background-color: rgb(14, 68, 105);
-    text-align: center;
-    height: 140px;
+    background-color: #0b3254;
+    padding: 15px 8%;
     display: flex;
-    justify-content: start;
     align-items: center;
-    padding-left: 30px;
 }
+
 #areaTituloEsubtitulo {
-    text-align: left;
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .iconeOnibus {
-    width: 80px;
+    width: 42px;
+    height: 42px;
 }
+
+#iconeOnibus {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .tituloEsubtitulo {
     display: flex;
     flex-direction: column;
 }
-#iconeOnibus {
-    border-radius: 30px;
-    width: 100%;
-}
+
 #tituloMobilidade {
-    color: white;
-    font-size: 30px;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800;
 }
+
 #tituloIndustrial {
-    color: rgb(61, 168, 229);
+    color: #389cd8;
 }
+
 #subtituloHeader {
-    color: white;
-}
-#tituloSobrePortal {
-    font-weight: 700;
-    font-size: 26px;
-    margin-top: 10px;
+    color: #b5d8f0;
+    font-size: 0.85rem;
+    font-weight: 400;
 }
 
-
+/* Navegação Principal */
 .barraNavegacaoPrincipal {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    background-color: rgb(0, 80, 146);
-    height: 50px;
-    margin: -40px;
-    margin-bottom: 40px;
+    background-color: #094979;
+    padding: 12px 8%;
+    gap: 25px;
 }
+
 .barraNavegacaoPrincipal a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 0.88rem;
+    transition: opacity 0.2s;
 }
 
+.barraNavegacaoPrincipal a:hover {
+    opacity: 0.8;
+}
 
-hr {
-    margin-top: 20px;
+/* ==========================================================================
+   3. PÁGINA PRINCIPAL (HOME)
+   ========================================================================== */
+main.paginaHome {
+    background-color: #e5edf5;
+    padding-bottom: 50px;
+}
+
+/* Secção Hero (Topo Azul) */
+#areaHeroHome {
+    background-color: #0c3d66;
+    padding: 45px 8% 65px 8%;
+}
+
+#gridHeroHome {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.colunaTextoHero h2 {
+    color: #ffffff;
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.colunaTextoHero .destaqueHero {
+    color: #389cd8;
+}
+
+.colunaTextoHero p {
+    color: #d0e4f5;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+.areaBotoesHero {
+    display: flex;
+    gap: 15px;
+}
+
+.btnHeroPrincipal {
+    background-color: #1a8ad0;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btnHeroSecundario {
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 2px solid #1a5c8e;
+    display: inline-block;
+}
+
+/* Card Sobre o Portal */
+.cardSobrePortal {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 22px;
+    color: #ffffff;
+}
+
+.cabecalhoSobre {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.iconeInfo {
+    font-size: 1.1rem;
+    color: #389cd8;
+}
+
+.cabecalhoSobre h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.cardSobrePortal p {
+    font-size: 0.85rem;
+    color: #d0e4f5;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.divisorSobre {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 18px;
+}
+
+.gridIconesSobre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
+.itemIconeSobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.circuloIcone {
+    width: 44px;
+    height: 44px;
+    background-color: #389cd8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuloIcone img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.itemIconeSobre span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#bannerImagemHome {
+    padding: 0 8%;
+    margin-top: -35px;
+}
+
+.containerImagemOnibus {
+    width: 100%;
+    max-height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 4px solid #ffffff;
+}
+
+.containerImagemOnibus img {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+#areaComoAjudar {
+    padding: 40px 8% 20px 8%;
+}
+
+.cabecalhoComoAjudar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalhoComoAjudar h2 {
+    color: #000000;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.cabecalhoComoAjudar p {
+    color: #333333;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.gridCardsComoAjudar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.cardAjuda {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 22px 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardAjuda h3 {
+    color: #0c3d66;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.cardAjuda p {
+    color: #555555;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 22px;
+    min-height: 48px;
+}
+
+.btnCardAjuda {
+    background-color: #389cd8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-align: center;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.btnCardAjuda:hover {
+    background-color: #2885bf;
+}
+
+main.paginaHorarios {
+    background-color: #dce7f3;
+    padding: 40px 8%;
+    min-height: 80vh;
+}
+
+.cabecalhoHorarios {
+    margin-bottom: 25px;
+}
+
+#tituloPaginaHorarios {
+    font-size: 2.2rem;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#subtituloPginaHorarios {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#areaConsultaDeHorarios {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 35px;
+}
+
+#consultarHorario {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+#pontoEmbarque {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+#areaCampoEBotao {
+    display: flex;
+    gap: 15px;
+}
+
+#areaCampoEBotao input {
+    flex: 1;
+    max-width: 320px;
+    padding: 10px 15px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #555;
+    outline: none;
+}
+
+#btnBuscar {
+    background-color: #389cd8;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+#areaResultadosHorarios {
+    background-color: #0b375d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#cabecalhoPonto {
+    padding: 25px 30px;
+    color: white;
+}
+
+#cabecalhoPonto h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+#cabecalhoPonto h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#gridLinhasHorarios {
+    background-color: #e8f0f8;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.cardLinha {
+    background-color: #e2eaf1;
+    border-radius: 12px;
+    padding: 25px 20px;
+    border: 1px solid #d0dce7;
+    text-align: center;
+}
+
+.cardLinha h4 {
+    font-size: 1.25rem;
+    color: #000;
+    font-weight: 800;
     margin-bottom: 20px;
 }
-#iconesDaPaginaSobrePortal {
-    padding: 5px;
-    margin: 5px;
+
+.tituloProximas {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
 }
-.iconePaginaPrincipal {
-    width: 70px;
-    border-radius: 50px;
+
+.gradeHorarios {
+    background-color: #d8e1e9;
+    padding: 20px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
+.gradeHorarios span {
+    background-color: white;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #000;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
+main.paginaLinhas {
+    background-color: #e5edf5;
+    padding: 40px 8% 60px 8%;
+    min-height: 80vh;
+}
 
-#introducaoPaginaPrincipal {
+.cabecalhoLinhas {
+    margin-bottom: 30px;
+}
+
+#tituloPaginaLinhas {
+    color: #000000;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+#subtituloPaginaLinhas {
+    color: #333333;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#areaConsultaLinha {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+}
+
+#tituloConsultarLinha {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+#areaCampoEBotaoLinha {
     display: flex;
-    background: linear-gradient(#133048, #154166, #1d5685);
-    margin: -40px;
+    gap: 15px;
 }
 
-
-#maisPraticidadePaginaPrincipal {
-    color: rgb(29, 184, 255);
+#areaCampoEBotaoLinha input {
+    flex: 1;
+    max-width: 320px;
+    padding: 10px 15px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #555555;
+    outline: none;
 }
-#mobilidadeTrabalhadorPaginaPrincipal {
+
+#btnBuscarLinha {
+    background-color: #389cd8;
     color: white;
-    font-size: 40px;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
 }
 
+#areaDetalhesRota {
+    background-color: #0c3d66;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-.informacaoPaginaPrincipal {
+#cabecalhoDetalhesRota {
+    padding: 25px 30px 20px 30px;
+    color: white;
+}
+
+.subtituloDetalhes {
+    font-size: 0.9rem;
+    color: #d0e4f5;
+    font-weight: 500;
+}
+
+#cabecalhoDetalhesRota h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+#gridConteudoLinha {
+    background-color: #e8f0f8;
     padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
-.areaSobrePortal {
-    background-color: rgb(197, 197, 197, 0.1);
-    margin: 30px;
+
+.cardTrajeto {
+    background-color: #e2eaf1;
+    border-radius: 12px;
+    padding: 25px 20px;
+    border: 1px solid #d0dce7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seccaoTrajeto h3,
+.seccaoPontosEmbarque h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.passosTrajeto {
+    color: #0d2847;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.seccaoPontosEmbarque ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.seccaoPontosEmbarque li {
+    color: #0d2847;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.btnConsultarHorariosRota {
+    background-color: #0f7bbd;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 75%;
+    display: block;
+}
+
+.cardMapa {
+    background-color: #e2eaf1;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #d0dce7;
+}
+
+.imagemMapa {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.imagemMapa img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.pontosNoMapa h3 {
+    font-size: 1.15rem;
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.pontosNoMapa ol {
+    padding-left: 20px;
+}
+
+.pontosNoMapa li {
+    color: #0d2847;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+main.paginaDicas {
+    background-color: #ffffff;
+    padding: 40px 8%;
+}
+
+.cabecalhoDicas {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtituloSeguranca {
+    color: #136dae;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#tituloPaginaDicas {
+    color: #0d2847;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 5px 0 10px 0;
+}
+
+#descricaoDicas {
+    color: #333333;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#areaContainerDicas {
+    background-color: #e3ebf2;
     padding: 30px;
     border-radius: 15px;
-    color: white;
-}
-.textoSobrePortal {
-    font-size: 20px;
-    color: white;
-    margin-top: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
 }
 
-#botaoConsultarLinhas {
-    background-color: rgb(0, 136, 221);
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
+.gridDicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cardDica {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.cardDica h3 {
+    color: #1a6296;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cardDica p {
+    color: #333333;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.areaBotaoVerMais {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.btnVerMaisDicas {
+    background-color: #338ecb;
+    color: white;
     border: none;
+    padding: 10px 45px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#bannerSugestaoMelhoria {
+    background-color: #0c3d66;
     border-radius: 10px;
-    height: 50px;
+    padding: 25px 30px;
     margin-top: 30px;
-    width: 200px;
-    padding-left: 25px;
-    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#botaoConsultarLinhas a {
-    text-decoration: none;
+
+.textosBanner h3 {
     color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 5px;
 }
-#botaoVerDicas {
-    padding: 10px;
-    font-size: 16px;
+
+.textosBanner p {
+    color: #b0d2eb;
+    font-size: 0.85rem;
+}
+
+.btnBannerMelhoria {
+    background-color: #0f7bbd;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+main.paginaEmpresas {
+    background-color: #e5edf5;
+    padding: 40px 8% 60px 8%;
+    min-height: 80vh;
+}
+
+.cabecalhoEmpresas {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#tituloPaginaEmpresas {
+    color: #081e36;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+#subtituloPaginaEmpresas {
+    color: #333333;
+    font-size: 0.95rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.gridEmpresas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cardEmpresa {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    justify-content: space-between;
+}
+
+.logoEmpresa {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logoEmpresa img {
+    max-width: 160px;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+.descricaoEmpresa {
+    color: #444444;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.localizacaoEmpresa {
+    color: #222222;
     font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    height: 50px;
-    text-decoration: none;
-    width: 150px;
-    background-color: rgb(18, 53, 73);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
-#botaoVerDicas a {
+
+.btnSaibaMaisEmpresa {
+    background-color: #0b5993;
     color: white;
     text-decoration: none;
+    padding: 10px 0;
+    width: 80%;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: background 0.2s;
 }
 
+.btnSaibaMaisEmpresa:hover {
+    background-color: #084370;
+}
 
+#blocoDetalheEmpresa {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.logoDetalhe img {
+    max-width: 180px;
+    max-height: 45px;
+    object-fit: contain;
+}
+
+.divisorBlocoEmpresa {
+    border: 0;
+    height: 1px;
+    background-color: #d0d0d0;
+    margin: 20px 0;
+}
+
+.conteudoDetalheEmpresa h3 {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.conteudoDetalheEmpresa p {
+    color: #333333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+main.paginaContato {
+    background-color: #e5edf5;
+    padding: 40px 8% 60px 8%;
+    min-height: 80vh;
+}
+
+#cardContainerContato {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cabecalhoContato {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tagFaleConosco {
+    color: #136dae;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#tituloCentralAtendimento {
+    color: #081e36;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 5px 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+#descricaoContato {
+    color: #444444;
+    font-size: 0.95rem;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.linhaFormulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupoCampo label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222222;
+}
+
+.grupoCampo input,
+.grupoCampo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333333;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.grupoCampo input::placeholder,
+.grupoCampo textarea::placeholder {
+    color: #888888;
+}
+
+.grupoCampo input:focus,
+.grupoCampo textarea:focus {
+    border-color: #389cd8;
+}
+
+.grupoCampo textarea {
+    resize: vertical;
+}
+
+#btnEnviarMensagem {
+    background-color: #389cd8;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+#btnEnviarMensagem:hover {
+    background-color: #2885bf;
+}
+
+#gridCardsInformacaoContato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.cardInfoContato {
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.tituloInfo {
+    font-size: 0.95rem;
+    color: #222222;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.conteudoInfo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.emailHighlight {
+    text-decoration: underline;
+}
 
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(18, 59, 93);
-    height: 100px;
+    align-items: center;
+    background-color: #0c3d66;
+    padding: 20px 8%;
 }
+
 #divisaoUmFooter {
     display: flex;
     align-items: center;
-    margin-left: -30px;
-    border-radius: 60px;
-    background-color: rgb(24, 91, 122);
-    padding: 20px;
+    border-radius: 20px;
+    background-color: #12517d;
+    padding: 8px 20px;
 }
-#divisaoDoisFooter {
-    display: flex;
-    align-items: center;
 
-}
 footer p {
-    padding: 30px;
-    color: white;
-    font-size: 22px;
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 600;
 }

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Contato</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,33 +22,80 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
-        <article>
-            <h2>Entre em contato conosco</h2>
-            <input type="text" placeholder="Nome" id="nome"> <br>
-            <input type="email" placeholder="E-mail" id="email" > <br>
-            <input type="Telefone" placeholder="Telefone" id="telefone"> <br>
-            <textarea placeholder="Mensagem" id="mensagem"></textarea> <br>
+    <main class="paginaContato">
+        <section id="cardContainerContato">
+            <!-- Cabeçalho Interno do Card -->
+            <div class="cabecalhoContato">
+                <span class="tagFaleConosco">FALE CONOSCO</span>
+                <h2 id="tituloCentralAtendimento">CENTRAL DE ATENDIMENTO</h2>
+                <p id="descricaoContato">Entre em contato conosco para tirar dúvidas, relatar problemas de transporte ou enviar sugestões.</p>
+            </div>
 
-            <button id="botaoEnviar">Enviar</button>
-        </article>
+            <!-- Formulário de Contato -->
+            <form action="#" method="POST" id="formContato">
+                <div class="linhaFormulario">
+                    <div class="grupoCampo">
+                        <label for="nome">Seu Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: João Vitor Ferreira">
+                    </div>
+
+                    <div class="grupoCampo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: joao123@gmail.com">
+                    </div>
+                </div>
+
+                <div class="linhaFormulario">
+                    <div class="grupoCampo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Ex: 19-999999999">
+                    </div>
+
+                    <div class="grupoCampo">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Ex: Dúvida sobre horários">
+                    </div>
+                </div>
+
+                <div class="grupoCampo campoMensagem">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Descreva sua dúvida os sugestão" rows="4"></textarea>
+                </div>
+
+                <button type="submit" id="btnEnviarMensagem">Enviar Mensagem</button>
+            </form>
+
+            <!-- Cards Informativos Inferiores -->
+            <div id="gridCardsInformacaoContato">
+                <div class="cardInfoContato">
+                    <p class="tituloInfo">E-mail de suporte</p>
+                    <p class="conteudoInfo emailHighlight">suporte.mobilidade123@gmail.com</p>
+                </div>
+
+                <div class="cardInfoContato">
+                    <p class="tituloInfo">Telefone de contato</p>
+                    <p class="conteudoInfo">(55) 19-991231212</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>

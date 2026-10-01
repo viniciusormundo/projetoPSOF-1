@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Dicas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,23 +22,84 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main class="paginaDicas">
+        <!-- Cabeçalho da Página -->
+        <section class="cabecalhoDicas">
+            <span class="subtituloSeguranca">SEGURANÇA E BEM-ESTAR</span>
+            <h2 id="tituloPaginaDicas">DICAS DE MOBILIDADE</h2>
+            <p id="descricaoDicas">Orientações para tornar seu trajeto diário mais seguro, rápido e confortável.</p>
+        </section>
+
+        <!-- Container Cinza das Dicas -->
+        <section id="areaContainerDicas">
+            <!-- Primeira Linha (Dicas 1 a 3) -->
+            <div class="gridDicas">
+                <article class="cardDica">
+                    <h3>Dica 1</h3>
+                    <p>Chegue ao ponto de embarque pelo menos 10 minutos antes do horário previsto para evitar transtornos e garantir assento.</p>
+                </article>
+
+                <article class="cardDica">
+                    <h3>Dica 2</h3>
+                    <p>Verifique caminhos diferentes ou linhas integradas para chegar mais rápido ao seu destino em horários de pico.</p>
+                </article>
+
+                <article class="cardDica">
+                    <h3>Dica 3</h3>
+                    <p>Planeje sua rota antes de sair de casa, pois evita longas esperas no e garante uma viagem.</p>
+                </article>
+            </div>
+
+            <!-- Botão Ver Mais Intermediário -->
+            <div class="areaBotaoVerMais">
+                <button class="btnVerMaisDicas">Ver mais</button>
+            </div>
+
+            <!-- Segunda Linha (Dicas 4 a 6) -->
+            <div class="gridDicas">
+                <article class="cardDica">
+                    <h3>Dica 4</h3>
+                    <p>Fique com seu crachá de identificação funcional ou passe de transporte pronto para agilizar a conferência pelo motorista.</p>
+                </article>
+
+                <article class="cardDica">
+                    <h3>Dica 5</h3>
+                    <p>Caso note qualquer problema no veículo ou atraso fora do comum, utilize nosso canal de suporte rápido para relatar.</p>
+                </article>
+
+                <article class="cardDica">
+                    <h3>Dica 6</h3>
+                    <p>Respeite os assentos preferenciais, utilize fones de ouvido para mídias e mantenha o ônibus limpo para todos os colegas.</p>
+                </article>
+            </div>
+
+            <!-- Banner de Sugestão de Melhoria -->
+            <article id="bannerSugestaoMelhoria">
+                <div class="textosBanner">
+                    <h3>Tem alguma sugestão de melhoria?</h3>
+                    <p>Entre em contato conosco e envie algum comentário</p>
+                </div>
+                <a href="contato.html" class="btnBannerMelhoria">Ver mais</a>
+            </article>
+        </section>
     </main>
-    
+
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>

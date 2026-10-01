@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Home</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomhuria&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,69 +22,92 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
-        <section id="introducaoPaginaPrincipal">
-            <article class="informacaoPaginaPrincipal">
-                <h2 id="mobilidadeTrabalhadorPaginaPrincipal">Mobilidade para o trabalhador: <span id="maisPraticidadePaginaPrincipal">Mais praticidade, segurança e informação</span></h2>
-                <p class="textoSobrePortal">Consulte itinerários em tempo real, horários de partidas dos ônibus fretados e regulares, além de orientações para o seu deslocamento até o polo industrial.</p>
+    <main class="paginaHome">
+        <!-- Secção Principal do Hero (Fundo Azul Escuro) -->
+        <section id="areaHeroHome">
+            <div id="gridHeroHome">
+                <!-- Coluna da Esquerda: Textos e Botões -->
+                <div class="colunaTextoHero">
+                    <h2>Mobilidade para o trabalhador: <span class="destaqueHero">Mais praticidade, segurança e informação</span></h2>
+                    <p>Consulte itinerários em tempo real, horários de partidas dos ônibus fretados e regulares, além de orientações para o seu deslocamento até o polo industrial.</p>
+                    <div class="areaBotoesHero">
+                        <a href="linhas.html" class="btnHeroPrincipal">Consultar Linha</a>
+                        <a href="dicas.html" class="btnHeroSecundario">Ver dicas</a>
+                    </div>
+                </div>
 
-                <button id="botaoConsultarLinhas"><a href="linhas.html">Consultar Linha</a></button>
-                <button id="botaoVerDicas"><a href="dicas.html">Ver Dicas</a></button>
-            </article>
-
-            <article class="areaSobrePortal">
-                <h3 id="tituloSobrePortal">
-                    <strong>Sobre o Portal</strong>
-                </h3>
-                <p class="textoSobrePortal">Um portal criado para facilitar o acesso dos trabalhadores a informações sobre transporte, rotas e mobilidade até o trabalho</p>
-
-                <hr>
-
-                <figure id="iconesDaPaginaSobrePortal">
-                    <img src="imagens/icone_onibus.png" alt="Ícone Ônibus" class="iconePaginaPrincipal">
-                    <img src="imagens/icone_seguranca.png" alt="Ícone Segurança" class="iconePaginaPrincipal">
-                    <img src="imagens/icone_industria.png" alt="Ícone Indústria" class="iconePaginaPrincipal">
-                </figure>
-            </article>
+                <!-- Coluna da Direita: Card "Sobre o Portal" -->
+                <article class="cardSobrePortal">
+                    <div class="cabecalhoSobre">
+                        <span class="iconeInfo">&#9432;</span>
+                        <h3>Sobre o Portal</h3>
+                    </div>
+                    <p>Um portal criado para facilitar o acesso dos trabalhadores a informações sobre transporte, rotas e mobilidade até o trabalho</p>
+                    <hr class="divisorSobre">
+                    <div class="gridIconesSobre">
+                        <div class="itemIconeSobre">
+                            <div class="circuloIcone"><img src="./imagens/icone_onibus.png" alt="Transporte"></div>
+                            <span>Transporte</span>
+                        </div>
+                        <div class="itemIconeSobre">
+                            <div class="circuloIcone"><img src="./imagens/icone_seguranca.png" alt="Segurança"></div>
+                            <span>Segurança</span>
+                        </div>
+                        <div class="itemIconeSobre">
+                            <div class="circuloIcone"><img src="./imagens/icone_industria.png" alt="Indústria"></div>
+                            <span>Indústria</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section id="introducaoAjudaPaginaPrincipal">
-            <figure id="areaImagemOnibusPaginaPrincipal">
-                <img src="imagens/imagemOnibus.png" alt="Imagem Ônibus">
-            </figure>
+        <!-- Banner com a Imagem do Ônibus -->
+        <section id="bannerImagemHome">
+            <div class="containerImagemOnibus">
+                <img src="./imagens/onibus_banner.jpg" alt="Ônibus de Transporte Industrial">
+            </div>
+        </section>
 
-            <h2 id="comoPodemosAjudar">Como Podemos Ajudar?</h2>
-            <p id="encontreOquePrecisa">Encontre o que você precisa</p>
+        <!-- Secção "Como Podemos Ajudar?" -->
+        <section id="areaComoAjudar">
+            <div class="cabecalhoComoAjudar">
+                <h2>Como Podemos Ajudar?</h2>
+                <p>Encontre o que você precisa</p>
+            </div>
 
-            <div>
-                <article>
-                    <h3>Linhas e Rotas</h3>
+            <div class="gridCardsComoAjudar">
+                <article class="cardAjuda">
+                    <h3>Linhas e rotas</h3>
                     <p>Consulte itinerários, horários e pontos de embarque.</p>
-                    <button><a href="linhas.html">Ver Linhas</a></button>
+                    <a href="linhas.html" class="btnCardAjuda">Saiba mais</a>
                 </article>
-                <article>
-                    <h3>Dicas de Mobilidade</h3>
+
+                <article class="cardAjuda">
+                    <h3>Dicas de mobilidade</h3>
                     <p>Orientações de segurança, horários e planejamento de viagem.</p>
-                    <button><a href="dicas.html">Ler Dicas</a></button>
+                    <a href="dicas.html" class="btnCardAjuda">Saiba mais</a>
                 </article>
-                <article>
-                    <h3>Empresas Parceiras</h3>
+
+                <article class="cardAjuda">
+                    <h3>Horários</h3>
                     <p>Consulte os horários de passagens no seu ponto.</p>
-                    <button><a href="empresas.html">Ver Empresas</a></button>
+                    <a href="horarios.html" class="btnCardAjuda">Saiba mais</a>
                 </article>
-                <article>
+
+                <article class="cardAjuda">
                     <h3>Contato</h3>
-                    <p>Entre em contato conosco para resolver dúvidas.</p>
-                    <button><a href="contato.html">Fale Conosco</a></button>
+                    <p>Entre em contato conosco para resolver dúvidas</p>
+                    <a href="contato.html" class="btnCardAjuda">Saiba mais</a>
                 </article>
             </div>
         </section>
@@ -94,10 +115,11 @@
 
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>

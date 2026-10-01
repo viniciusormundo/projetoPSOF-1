@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Industrial</title>
-
+    <title>Mobilidade Industrial - Horários</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,34 +22,77 @@
         </div>
     </header>
 
-    <main>
-        <nav class="barraNavegacaoPrincipal">
-            <a href="index.html">Início</a>
-            <a href="horarios.html">Horários</a>
-            <a href="linhas.html">Linhas e Rotas</a>
-            <a href="dicas.html">Dicas de Mobilidade</a>
-            <a href="empresas.html">Empresas Parceiras</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <nav class="barraNavegacaoPrincipal">
+        <a href="index.html">Home</a>
+        <a href="horarios.html">Horários</a>
+        <a href="linhas.html">Linhas e rotas</a>
+        <a href="dicas.html">Dicas de Mobilidade</a>
+        <a href="empresas.html">Empresas Parceiras</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
-        <h2 id="tituloPaginaHorarios">Consulte os Horários</h2>
-        <p id="subtituloPginaHorarios">Digite um ponto de embarque para consultar as próximas passagens.</p>
+    <main class="paginaHorarios">
+        <section class="cabecalhoHorarios">
+            <h2 id="tituloPaginaHorarios">Consulte os horários</h2>
+            <p id="subtituloPginaHorarios">Digite um ponto de embarque para consultar as próximas passagens.</p>
+        </section>
 
+        <!-- Bloco do Campo de Busca -->
         <article id="areaConsultaDeHorarios">
-            <div id="areaPesquisarHorario">
-                <h3 id="consultarHorario">Consultar Horário</h3>
-                <p id="pontoEmbarque">Digite um ponto de embarque</p>
+            <h3 id="consultarHorario">Consultar horário</h3>
+            <p id="pontoEmbarque">Digite um ponto de embarque</p>
+            <div id="areaCampoEBotao">
                 <input type="text" placeholder="Ex: Avenida Campinas">
+                <button type="button" id="btnBuscar">Buscar</button>
             </div>
         </article>
+
+        <!-- Bloco de Exibição dos Horários -->
+        <section id="areaResultadosHorarios">
+            <div id="cabecalhoPonto">
+                <h2>Horários no ponto</h2>
+                <h3>Ponto: Avenida Campinas</h3>
+            </div>
+
+            <div id="gridLinhasHorarios">
+                <!-- Linha 01 -->
+                <article class="cardLinha">
+                    <h4>Linha 01 - Distrito Industrial</h4>
+                    <p class="tituloProximas">Próximas Passagens</p>
+                    <div class="gradeHorarios">
+                        <span>06:00</span>
+                        <span>06:30</span>
+                        <span>07:00</span>
+                        <span>07:30</span>
+                        <span>08:00</span>
+                        <span>08:30</span>
+                    </div>
+                </article>
+
+                <!-- Linha 02 -->
+                <article class="cardLinha">
+                    <h4>Linha 02 - Centro Urbano</h4>
+                    <p class="tituloProximas">Próximas Passagens</p>
+                    <div class="gradeHorarios">
+                        <span>06:15</span>
+                        <span>06:45</span>
+                        <span>07:15</span>
+                        <span>07:45</span>
+                        <span>08:15</span>
+                        <span>08:45</span>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div id="divisaoUmFooter">
-            <p>2026 Mobilidade Industrial</p>
+            <p>&copy; 2026 Mobilidade Industrial</p>
         </div>
         <div id="divisaoDoisFooter">
             <p>Contato: suporte.mobilidade123@gmail.com</p>
         </div>
     </footer>
 </body>
+</html>
